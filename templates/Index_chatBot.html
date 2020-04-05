@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<link ... href="/static/main.css" />
+<html>
+  <!--From https://codepen.io/frytyler/pen/EGdtg-->
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Jarvis</title>
+  </head>
+
+  <body>
+    <div class="panel">
+      <h1>Hello you are not alone! Talk to Harso bhai's bot.</h1>
+
+      <!-- Main Input For Receiving Query to our ML -->
+      <form action="{{ url_for('TalkToBot')}}" method="post">
+        <input type="text" name="user_Response" placeholder="say something.." required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large btn-success">send</button>
+      </form>
+
+      <br>
+      <br>
+      {{ prediction_text }}
+
+    </div>
+
+
+  </body>
+
+</html>
+
